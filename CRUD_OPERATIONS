@@ -1,0 +1,31 @@
+-- Creating a Database 
+CREATE DATABASE MOVIE_DB;
+
+USE MOVIE_DB;
+
+
+-- Create a table in the database MOVIE_DB
+CREATE TABLE MOVIE_INFO(
+MOVIE_ID INT PRIMARY KEY,
+MOVIE_NAME VARCHAR(50) NOT NULL,
+MOVIE_RATING FLOAT
+);
+
+-- Insert values in to the databases 
+INSERT INTO MOVIE_INFO 
+VALUES 
+(1001, 'L2 LUCIFER', 4.7),
+(1002, 'BHAHUBALI', 4.9),
+(1003, 'RRR', 4.8);
+
+-- Updating some of the values 
+UPDATE MOVIE_INFO
+SET MOVIE_NAME = 'BHAHUBALI 2'
+WHERE MOVIE_ID = 1002;
+
+-- Deleting records from the database 
+DELETE FROM MOVIE_INFO 
+WHERE MOVIE_ID = 1005;
+
+-- View the table
+SELECT * FROM MOVIE_INFO;
